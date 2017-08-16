@@ -4,9 +4,12 @@
 	</head>
 	<body>
 		<h1>{{site}} Headlines</h1>
-		<b>{{article.title}}</b><br />
-		<i>{{article.published}}</i><br />
-		<p>{{article.summary}}</p>
+		{% for article in articles %}
+			<b><a href="{{article.link}}">{{article.title}}</a></b><br />
+			<i>{{article.published}}</i><br />
+			<p>{{article.summary}}</p>
+			<hr />
+		{% endfor %}
 	</body>
 </html>
 		
